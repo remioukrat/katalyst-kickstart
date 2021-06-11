@@ -1,0 +1,9 @@
+get_filename_component(Model_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+
+include(CMakeFindDependancyMacro)
+
+if (NOT TARGET Model::model)
+    include("${Model_CMAKE_DIR}/Model-targets.cmake")
+endif()
+
+set(Model_LIBRARIES Model::model)

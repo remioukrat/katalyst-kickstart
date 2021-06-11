@@ -1,0 +1,9 @@
+get_filename_component(Repository_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+
+include(CMakeFindDependancyMacro)
+
+if (NOT TARGET Repository::repository)
+    include("${Repository_CMAKE_DIR}/Repository-targets.cmake")
+endif()
+
+set(Repository_LIBRARIES Repository::repository)

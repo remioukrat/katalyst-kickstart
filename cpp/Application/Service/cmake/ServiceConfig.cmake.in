@@ -1,0 +1,9 @@
+get_filename_component(Service_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+
+include(CMakeFindDependancyMacro)
+
+if (NOT TARGET Service::service)
+    include("${Service_CMAKE_DIR}/Service-targets.cmake")
+endif()
+
+set(Service_LIBRARIES Service::service)
