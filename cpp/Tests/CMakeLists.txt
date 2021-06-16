@@ -37,6 +37,9 @@ target_link_libraries(${PROJECT_NAME}
         repository
         service
         gtest_main
+        gtest
+        gmock
+        gmock_main
 )
 
 set_target_properties(${PROJECT_NAME}
